@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body onload="startTime()">
+
+<div class="topnav">
+  <a class="active" href="index.html">Home</a>
+  <a href="https://wa.me/+249926449414">Whatsapp</a>
+  <a href="contact.html">Contact</a>
+  <a href="#about">About</a>
+</div>
+<h1 class="m1">MATR!X</h1>
+<h2 class="m2">for crypto and exchange </h2>
+<div id="txt"></div>
+
+<script>
+function startTime() {
+  const today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =  h + ":" + m + "p.m";
+  setTimeout(startTime, 1000);
+}
+
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+<div class="line"></div>
+<div class="div1">
+  <img src="eart.jpg" width="60px">
+  <img src="contact.jpg" width="60px"><br>
+  <img src="call.jpg" width="60px">
+  <img src="location.jpg" width="60px">
+</div>
+<div class="coin">
+  <img src="btc.png" width="45px">
+  <img src="payeer.png" width="45px">
+  <img src="adv.png" width="45px">
+</div>
+
+</body>
+</html>
